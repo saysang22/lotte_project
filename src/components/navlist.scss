@@ -1,0 +1,126 @@
+@import './reset';
+@import './mixin';
+
+.container_wrap {
+    width: 100%;
+    padding: 100px 0 0 0;
+
+    .container_flex {
+
+        @include horizental_flex;
+        align-items: flex-start;
+
+        .area_position {
+            width: 15%;
+        }
+
+        .area_wrap {
+
+            border-right: 1px solid #707070;
+            width: 15%;
+            height: 100vh;
+            position: fixed;
+            top: 100px;
+            left: 0;
+
+            .text_wrap {
+                @include vertical_flex;
+                justify-content: space-around;
+                height: calc(100% - 300px);
+            }
+            h4 {
+                font-size: 30px;
+                color: #998465;
+                font-weight: 600;
+                padding: 20px;
+                margin: 20px 0 0 0;
+            }
+
+            p {
+                font-size: 25px;
+                font-weight: lighter;
+            }
+        }
+
+        .contents_wrap {
+            width: 80%;
+
+            .title {
+                @include horizental_flex;
+                justify-content: space-between;
+            }
+
+            h2 {
+                color: #998465;
+                font-size: 50px;
+                font-weight: bold;
+                margin: 30px 0 20px 0;
+
+            }
+
+            .total {
+                text-align: left;
+                margin: 0 0 0 20px;
+            }
+
+            select {
+                margin: 0 30px 0 0;
+            }
+
+            .content {
+
+                @include horizental_flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                width: 100%;
+
+                .card_wrap {
+                    border: 1px solid #707070;
+                    width: 31%;
+                    margin: 1%;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 23px;
+                        text-align: center;
+                        font-weight: bold;
+
+                        &:first-child {
+                            font-size: 16px;
+                            text-align: right;
+                            margin: 0 10px 0 0;
+                            padding: 10px;
+                            color: #998465;
+                        }
+                    }
+
+                    .price {
+                        padding: 15px;
+                        @include horizental_flex;
+
+                        span {
+                            font-size: 20px;
+                            padding: 10px;
+
+                            &:last-child {
+                                font-size: 40px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                }
+            }
+        
+        }
+
+
+    }
+}

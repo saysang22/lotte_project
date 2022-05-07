@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.background {
+  background-image: url('./main_01.jpg');
+  background-size: cover;
+  background-position: 50% 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px #333 ;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

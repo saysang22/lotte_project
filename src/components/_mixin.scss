@@ -1,0 +1,19 @@
+@mixin horizental_flex() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin  vertical_flex() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+$text_shadow: 1px 1px 2px #000;
+
+$text_shadow_big: 0 3px 6px #000;
