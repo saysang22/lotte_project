@@ -1,5 +1,5 @@
 import React, {} from "react";
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './navlist.scss';
 import NavCard from "./nav_card";
 
@@ -11,12 +11,40 @@ const Navlist = (props) => {
         return a.cate === id ? { ...a } : null;
     })
 
+    let area = '';
+
+switch(id) {
+    case 'drive':
+        area = '드라이브스루';
+        break;
+    case 'store':
+        area = '레스토랑 이용권';
+        break;
+
+    case 'food':
+        area = '푸드';
+        break;
+
+    case 'primium':
+        area = '프리미엄 베딩';
+        break;
+
+    case 'life':
+        area = '라이프스타일';
+        break;
+
+    case 'paper':
+        area = '지류 상품권';
+        break;
+
+}
+
     return (
         <div className="container_wrap">
             <div className="container_flex">
                 <div className="area_position">
                     <div className="area_wrap">
-                        <h4>드라이브스루</h4>
+                        <h4>{area}</h4>
                         <div className="text_wrap">
                             <p>롯데호텔 서울</p>
                             <p>롯데호텔 월드</p>
@@ -27,7 +55,7 @@ const Navlist = (props) => {
                 </div>
                 {/* .area_wrap */}
                 <div className="contents_wrap">
-                    <h2>드라이브스루 전국</h2>
+                    <h2>{area}</h2>
                         <div className="title">
                         <p className="total">총 {total.length}개의 상품이 있습니다</p>
                         <select>
@@ -41,8 +69,8 @@ const Navlist = (props) => {
                     <div className="content">
 
                         {
-                            total.map((a, i) => {
-                                return                         <NavCard datas={total[i]}/>
+                            total.map((data) => {
+                                return <NavCard datas={data} key={data.id}/>
                             })
                         }
                     </div>

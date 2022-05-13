@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 const TextWrap = styled.div`
     margin: 10px 0 60px 0;
@@ -37,7 +38,7 @@ const Text = styled.p`
 
 const MainContentsItem = (props) => {
 
-    // const imgPath = '../d_' + props.i + '.jpg';
+    let a = useSelector((state) => state);
 
     return (
         <div className="col-md-4">
@@ -47,8 +48,8 @@ const MainContentsItem = (props) => {
                 </div>
                 <TextWrap>
                     <More>자세히 보기 {'>'}</More>
-                    <H4>{'['}{props.shoes.title}{']'}</H4>
-                    <Text>{props.shoes.content}</Text>
+                    <H4>{'['}{a.datas[props.i].title}{']'}</H4>
+                    <Text>{a.datas[props.i].content}</Text>
                 </TextWrap>
             </Link>
         </div>

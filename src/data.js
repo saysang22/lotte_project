@@ -6,7 +6,8 @@ export default [
       price : 88000,
       cate : 'drive',
       area: 'seoul',
-      showmain:true
+      showmain:true,
+      best: false
     },
   
     {
@@ -16,7 +17,9 @@ export default [
       price : 104000,
       cate : 'drive',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
   
@@ -27,7 +30,9 @@ export default [
       price : 59000,
       cate : 'drive',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -38,7 +43,9 @@ export default [
       price : 62000,
       cate : 'drive',
       area: 'world',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
     {
@@ -48,7 +55,9 @@ export default [
       price : 88000,
       cate : 'drive',
       area: 'world',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
     {
@@ -58,7 +67,9 @@ export default [
       price : 60000,
       cate : 'drive',
       area: 'world',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
     {
@@ -68,7 +79,9 @@ export default [
       price : 125000,
       cate : 'store',
       area: 'busan',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
     {
@@ -78,7 +91,9 @@ export default [
       price : 154000,
       cate : 'store',
       area: 'busan',
-      showmain:true
+      showmain:true,
+      best: true
+
 
     },
     {
@@ -88,7 +103,9 @@ export default [
       price : 260000,
       cate : 'store',
       area: 'busan',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
     {
@@ -98,7 +115,9 @@ export default [
       price : 130000,
       cate : 'store',
       area: 'busan',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
     {
@@ -108,7 +127,9 @@ export default [
       price : 130000,
       cate : 'store',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -119,7 +140,9 @@ export default [
       price : 135000,
       cate : 'store',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -130,7 +153,9 @@ export default [
       price : 10000,
       cate : 'food',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
     {
@@ -140,7 +165,9 @@ export default [
       price : 10000,
       cate : 'food',
       area: 'busan',
-      showmain:true
+      showmain:true,
+      best: false
+
 
     },
 
@@ -151,7 +178,9 @@ export default [
       price : 52000,
       cate : 'food',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -162,7 +191,9 @@ export default [
       price : 39000,
       cate : 'food',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -173,7 +204,9 @@ export default [
       price : 72000,
       cate : 'food',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
 
@@ -184,7 +217,9 @@ export default [
       price : 72000,
       cate : 'food',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -195,7 +230,9 @@ export default [
       price : 2700000,
       cate : 'primium',
       area: 'heaon',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
 
@@ -206,7 +243,9 @@ export default [
       price : 2520000,
       cate : 'primium',
       area: 'heaon',
-      showmain:true
+      showmain:true,
+      best: false
+
 
     },
 
@@ -217,7 +256,9 @@ export default [
       price : 2340000,
       cate : 'primium',
       area: 'heaon',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -228,7 +269,9 @@ export default [
       price : 1575000,
       cate : 'primium',
       area: 'heaon',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -239,7 +282,9 @@ export default [
       price : 1395000,
       cate : 'primium',
       area: 'heaon',
-      showmain:false
+      showmain:false,
+      best: true
+
 
     },
 
@@ -250,7 +295,9 @@ export default [
       price : 1215000,
       cate : 'primium',
       area: 'heaon',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     },
 
@@ -261,7 +308,9 @@ export default [
       price : 88000,
       cate : 'life',
       area: 'seoul',
-      showmain:true
+      showmain:true,
+      best: false
+
 
     },
 
@@ -272,7 +321,9 @@ export default [
       price : 42750,
       cate : 'life',
       area: 'seoul',
-      showmain:false
+      showmain:false,
+      best: false
+
 
     }
 
