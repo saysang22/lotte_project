@@ -5,6 +5,8 @@ const NavCard = (props) => {
 
     let price = props.datas.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
+    // https://raw.githubusercontent.com/saysang22/lotte_project/master/src/d_20.jpg
+
     return (
         <div className="card_wrap">
             <Link to={'/detail/' + props.datas.id}>

@@ -1,0 +1,121 @@
+@import './reset';
+@import './mixin';
+
+.login_modal_wrap {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include horizental_flex;
+    visibility: hidden;
+
+    .modal_wrap {
+        width: 500px;
+        height: 500px;
+        background: #fff;
+        @include vertical_flex;
+        justify-content: space-around;
+
+        .close_wrap {
+            background: #683e00;
+            height: 40px;
+            width: 100%;
+            margin: -25px 0 0 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .close_button {
+                cursor: pointer;
+                margin: 0 20px 0 0;
+                font-size: 1.5rem;
+                color: #fff;
+            }
+        }
+
+        .login_input_wrap {
+            height: 110px;
+            @include vertical_flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .login_input {
+                border-radius: 3px;
+                height: 50px;
+                width: 90%;
+                border: 1px solid #999;
+                padding: 0 0 0 10px;
+            }
+    
+        }
+
+
+        .submit_button {
+            width: 90%;
+
+            .login_button_default {
+                background: #998465;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                margin: 0 0 20px 0px;
+                cursor: pointer;
+                color: #fff;
+            }
+
+            .signup_button {
+                background: #626161;
+            }
+
+            .sns_button {
+                @include horizental_flex;
+                justify-content: space-between;
+
+                .sns_wrap {
+                    width: 140px;
+                    height: 100px;
+                    cursor: pointer;
+                    padding: 10px;
+                    @include vertical_flex;
+
+                    .sns_icon {
+                        font-size: 2rem;
+                    }
+
+
+                }
+
+                .kakao_wrap {
+
+                    background: #F7E600;
+
+                    .sns_title {
+
+                        color: #3A1D1D;
+                    }
+
+                }
+
+                .facebook_wrap {
+                    background: #3b5998;
+                    color: #fff;
+                }
+
+                .naver_wrap {
+                    background: #2DB400;
+                    color: #fff;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+.show_modal_wrap {
+
+    visibility: visible;
+}

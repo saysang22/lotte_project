@@ -1,0 +1,291 @@
+@import './reset';
+@import './mixin';
+
+
+.faq_total_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+
+    .faq_wrap {
+        display: none;
+    }
+
+    h3 {
+        @include componentTitle;
+    }
+
+    .tab_wrap {
+
+        .tab_button_wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+
+            .big_tab_button {
+
+                background: #998465;
+                color: #fff;
+                font-weight: 400;
+            }
+
+            span {
+                cursor: pointer;
+                border: 1px solid #DCDCDC;
+                width: 100%;
+                margin: 0 0 0 -1px;
+                height: 50px;
+                line-height: 50px;
+                color: #999;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+        .faq_search_wrap {
+            background: #F4F4F4;
+            padding: 50px;
+            margin: 50px 0 0 0;
+            position: relative;
+
+            
+            input {
+                width: 600px;
+                height: 60px;
+                padding: 0 0 0 15px;
+
+                &::placeholder {
+                    color: #999;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .search_icon {
+                position: absolute;
+                top: 50%;
+                right: 320px;
+                transform: translateY(-50%);
+                font-size: 1.6rem;
+                color: #999;
+            }
+        }
+        .select_button_wrap {
+            margin: 10px 0 0 0;
+
+            ul {
+                @include horizental_flex;
+                justify-content: space-between;
+
+                .tab_button_bg {
+                    background: #998465;
+                    color: #fff;
+                }
+            
+
+                li {
+                    padding: 10px 10px;
+                    border: 1px solid #DCDCDC;
+                    width: 14%;
+                    cursor: pointer;
+                    color: #999;
+                }
+                
+            }
+        }
+        .faq_table_wrap {
+            
+            margin: 10px 0 0 0;
+            width: 100%;
+
+            .faq_small_table_show {
+                visibility: visible;
+            }
+
+            .faq_small_table_hide {
+                display: none;
+            }
+
+            table {
+                width: 100%;
+                border-top: 2px solid #333;
+                tbody {
+
+                    display: flex;
+                    flex-direction: column;
+
+                    tr {
+                        display: flex;
+                    }
+                    
+                    td {
+                        border-bottom: 1px solid #DCDCDC;
+                        height: 50px;
+                        @include vertical_flex;
+                        cursor: pointer;
+
+                        &:nth-child(1) {
+                            flex: 1;
+                        }
+                        &:nth-child(2) {
+                            flex: 2;
+
+                        }
+                        &:nth-child(3) {
+                            flex: 10;
+                            align-items: flex-start;
+
+                        }
+                        &:nth-child(4) {
+                            flex: 1;
+
+                        }
+                        .faq_logo {
+                            display: block;
+                            background: #AD9E87;
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            color: #fff;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .faq_more_button_wrap {
+            cursor: pointer;
+            border: 1px solid #333;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            margin: 20px auto;
+            position: relative;
+
+            .more_icon {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .notice_wrap {
+        width: 100%;
+        display: none;
+
+        table {
+            width: 100%;
+            border-top: 2px solid #333;
+            margin: 10px 0 0 0;
+
+
+            th, td {
+                height: 40px;
+                text-align: left;
+                border-bottom: 1px solid #333;
+
+
+                &:last-child {
+                    text-align: right;
+
+                }
+            }
+
+            th {
+                color: #333;
+            }
+
+            td {
+                border-bottom: 1px solid #DCDCDC;
+
+            }
+
+        }
+    }
+
+    .faq_non_search_wrap {
+        width: 100%;
+        display: none;
+
+        h4 {
+            padding: 50px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .non_member_input_wrap {
+            width: 70%;
+            margin: 0 auto 30px;
+            border-top: 2px solid #333;
+            @include vertical_flex;
+            align-items: flex-start;
+
+            .order_num_wrap {
+                width: 100%;
+            }
+
+            .order_name_wrap {
+                width: 100%;
+            }
+
+            .phone_wrap {
+                width: 100%;
+                display: flex;
+                margin: 0 0 20px 0;
+
+                .certification_submit {
+                    display: inline-block;
+                    width: 150px;
+                    height: 50px;
+                    line-height: 50px;
+                    cursor: pointer;
+                    background: #333;
+                    color: #fff;
+                    margin: 0 0px 0 10px;
+                }
+            }
+
+            .certification_wrap {
+                width: 100%;
+                display: flex;
+                input {
+                    width: 70%;
+                }
+
+                .certification {
+                    display: inline-block;
+                    width: 120px;
+                    height: 50px;
+                    line-height: 50px;
+                    background: #666;
+                    color: #fff;
+                    cursor: pointer;
+                    margin: 0 0 0 10px;
+                }
+
+                .certification_timer {
+                    font-size: .8rem;
+                    margin: 0 0 0 10px;
+                    line-height: 50px;
+                }
+            }
+
+            p {
+                padding: 10px 0;
+                text-align: left;
+            }
+
+            input {
+                width: 100%;
+                height: 50px;
+                padding: 0 0 0 10px;
+            }
+
+        }
+    }
+
+    .show_faq_table {
+        display: block;
+    }
+}

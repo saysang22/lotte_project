@@ -1,0 +1,120 @@
+@import './reset';
+@import './mixin';
+
+.paper_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+    
+    h3 {
+        @include componentTitle;
+    }
+
+    .inner_paper {
+
+        .paper_content {
+            margin: 50px 0 0 0;
+
+            @include horizental_flex;
+
+            .img_list {
+
+                margin: 0 80px 0 0px;
+                height: 850px;
+                flex: 1;
+
+                li {
+                    padding: 0px 0 50px 0;
+                }
+
+            }
+
+            .table_wrap {
+
+                @include vertical_flex;
+                align-self: flex-start;
+                flex: 2;
+
+                h4 {
+                    align-self: flex-start;
+                    margin: 0 0 20px 0;
+                    font-size: 1.5rem;
+                    color: #333;
+                }
+                span {
+                    color: #666;
+                    width: 100%;
+                    text-align: left;
+                }
+
+                table {
+                    margin: 20px 0 20px 0;
+                    width: 100%;
+
+                    th {
+                        padding: 20px;
+                        color: #333;
+                        border-right: 1px solid #DCDCDC;
+                        border-bottom: 1px solid #DCDCDC;
+                        border-top: 2px solid #333;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+
+                    td {
+                        padding: 20px;
+                        color: #666;
+                        border-bottom: 1px solid #DCDCDC;
+                        border-right: 1px solid #DCDCDC;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+
+                }
+
+                .paper_small_title {
+                    font-size: .9rem;
+                    font-weight: bold;
+                    color: #333;
+                }
+
+                .paper_txt {
+                    color: #666;
+                    font-size: .8rem;
+                }
+                .paper_top_text {
+
+                    width: 100%;
+
+                    p {
+                        text-align: left;
+                    }
+                }
+
+                .paper_bottom_text {
+
+                    width: 100%;
+                    margin: 20px 0 0 0;
+
+                    p {
+                        text-align: left;
+                    }
+                }
+
+            }
+        }
+
+        .paper_food_content {
+            width: 1200px;
+            margin: 30px auto;
+            border-top: 1px solid #DCDCDC;
+            padding: 60px 0;
+
+        }
+
+    }
+}

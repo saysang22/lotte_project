@@ -1,16 +1,36 @@
 import React, {} from "react";
 import { useParams } from 'react-router-dom';
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import './navlist.scss';
 import NavCard from "./nav_card";
+import qs from 'qs';
 
 const Navlist = (props) => {
 
     const { id } = useParams();
+    const { search } = useLocation();
+
+    const query = qs.parse(search, {
+        ignoreQueryPrefix: true
+    });
+
+
 
     const total = props.datas.filter((a) => {
-        return a.cate === id ? { ...a } : null;
+
+        if(id === 'search'){
+
+            console.log(decodeURI(search))
+
+            return a.content.indexOf(query.text) > -1 ? { ...a } : null ;
+
+        }else{
+
+            return a.cate === id ? { ...a } : null;
+        }
     })
 
+    
     let area = '';
 
 switch(id) {
@@ -36,6 +56,11 @@ switch(id) {
     case 'paper':
         area = '지류 상품권';
         break;
+
+    case 'search':
+        area = query.text + ' 검색 결과';
+        break;
+    
 
 }
 

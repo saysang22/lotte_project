@@ -13,7 +13,18 @@
     align-items: center;
 }
 
+@mixin componentTitle {
+    font-size: 50px;
+    color: #998465;
+    margin: 30px 0 30px 0;
+    font-weight: bold;
+    padding: 50px;
+    border-bottom: 1px solid #DCDCDC;
+
+}
+
 
 $text_shadow: 1px 1px 2px #000;
 
 $text_shadow_big: 0 3px 6px #000;
+

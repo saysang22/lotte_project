@@ -1,0 +1,122 @@
+@import './reset';
+@import './mixin';
+
+.non_member_modal_wrap {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include horizental_flex;
+    visibility: hidden;
+
+
+    .non_member_wrap {
+        width: 500px;
+        height: 500px;
+        background: #fff;
+
+        .close_wrap {
+            background: #683e00;
+            height: 40px;
+            width: 100%;
+            margin: -25px 0 0 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .close_button_non {
+                cursor: pointer;
+                margin: 0 20px 0 0;
+                font-size: 1.5rem;
+                color: #fff;
+            }
+        }
+
+        .non_member_input_wrap {
+            padding: 20px;
+            height: 400px;
+            @include vertical_flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+
+            .guide_text {
+                margin: 0px 0 20px 0;
+            }
+
+
+
+            input {
+                width: 100%;
+                height: 40px;
+            }
+
+            .phone_submit {
+                @include horizental_flex;
+                width: 100%;
+
+                span {
+                    width: 80%;
+                    background: #333;
+                    margin: 0 0 0 20px;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #fff;
+                }
+            }
+
+            .certification_number {
+                @include horizental_flex;
+                width: 100%;
+                justify-content: flex-start;
+
+                .certification_number_left {
+                    @include horizental_flex;
+
+
+                    .certification_button {
+                        width: 100%;
+                        display: block;
+                        background: #666;
+                        margin: 0 0 0 5px;
+                        height: 40px;
+                        line-height: 40px;
+                        color: #fff;
+                    }
+                }
+
+                .certification_number_right {
+                    margin: 0 0 0 5px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: .7rem;
+
+                }
+            }
+        }
+
+        .non_member_search {
+            text-align: center;
+
+            .non_member_search_button {
+                display: block;
+                width: 300px;
+                height: 50px;
+                line-height: 50px;
+                background: #AD9E87;
+                margin: 0 auto;
+                color: #fff;
+                font-size: 1.2rem;
+            }
+
+
+        }
+
+    }
+}
+
+.show_non_member_modal_wrap {
+    visibility: visible;
+}

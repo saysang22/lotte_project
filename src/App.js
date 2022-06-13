@@ -12,6 +12,8 @@ import Detail from './components/detail';
 import BannerWrap from './components/banner';
 import BestContents from './components/bestContents';
 import Footer from './components/footer';
+import Faq from './components/faq';
+import Cart from './components/cart';
 
 function App() {
 
@@ -19,36 +21,33 @@ function App() {
 
   return (
     <div>
-
-      <Route exact path='/lotte_portfolio'>
-        <Header topPage={true} datas={shoes}/>
-        <Main/>
-        <MainContents shoes={shoes} showmain={true}/>
-        <BannerWrap/>
-        <BestContents/>
+      <Header topPage={true} datas={shoes} />
+      <Route exact path="/lotte_portfolio">
+        <Main />
+        <MainContents shoes={shoes} showmain={true} />
+        <BannerWrap />
+        <BestContents />
       </Route>
 
-
-      <Route path='/detail/:id'>
-        <Header topPage={false} datas={shoes}/>
-        <Detail shoes={shoes}/>
+      <Route path="/detail/:id">
+        <Detail shoes={shoes} />
       </Route>
-    
-      {/* <Route path='/components/:id'>
-        <MainContents shoes={shoes}/>
-      </Route> */}
+
       <Switch>
-        <Route path='/components/paper'>
-          <Header topPage={false} datas={shoes}/>
-          <Paper/>
+        <Route path="/components/paper">
+          <Paper />
         </Route>
-        <Route path='/components/:id'>
-          <Header topPage={false} datas={shoes}/>
-          <Navlist datas={shoes}/>
+        <Route path="/components/faq">
+          <Faq />
+        </Route>
+        <Route path='/components/cart'>
+          <Cart/>
+        </Route>
+        <Route path="/components/:id">
+          <Navlist datas={shoes} />
         </Route>
       </Switch>
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }

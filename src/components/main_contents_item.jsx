@@ -12,9 +12,6 @@ const H4 = styled.h4`
     text-align: left;
 `
 
-const TextBox = styled.div`
-
-`
 const More = styled.p`
     text-align: right;
     margin: 0 0 15px 0;

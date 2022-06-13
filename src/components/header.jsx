@@ -1,6 +1,8 @@
 import React, {useState,useEffect} from "react";
 import { Link } from 'react-router-dom';
 import './header.scss';
+import LoginModal from "./login_modal";
+import NonMemberModal from "./non_members_modal";
 
 const Header = (props) => {
 
@@ -43,18 +45,64 @@ const Header = (props) => {
             });
     
         }
-
-        // linkButton.map((data, index) => {
-
-        //     return (
-        //         linkButton[index].addEventListener('click', function(){
-               
-        //         document.querySelector('.none_display').classList.toggle('ham_menu_wrap');
-        //     })
-        //     )
-        // });
         
     },[]);
+
+    useEffect(() => {
+
+        const loginClick = document.querySelector('.login_show');
+        const modalShow = document.querySelector('.login_modal_wrap');
+
+        loginClick.addEventListener('click', function(){
+            modalShow.classList.toggle('show_modal_wrap');
+        });
+
+    },[]);
+
+    useEffect(() => {
+
+        const nonMemberClick = document.querySelector('.non_member_show');
+        const showNonMemberModal = document.querySelector('.non_member_modal_wrap');
+
+        nonMemberClick.addEventListener('click', function(){
+
+            showNonMemberModal.classList.toggle('show_non_member_modal_wrap');
+            
+        });
+
+
+    },[]);
+
+    useEffect(() => {
+        
+        const homeLogo = document.querySelector('.logo');
+        const visitA = document.querySelectorAll('.menu a');
+
+            homeLogo.addEventListener('click', function(){
+
+                for(let i = 0; i < visitA.length; i++) {
+
+                visitA[i].classList.remove('visit_a');
+                
+            }
+
+
+            });
+    
+
+        
+    },[])
+
+    const onKey = (e) => {
+
+        if(e.key === 'Enter') {
+
+            window.location.href = '/components/search?text=' + e.target.value;
+           
+        }
+
+    }
+
 
     const [test, setTest] = useState('');
 
@@ -63,7 +111,7 @@ const Header = (props) => {
         <div className="header">
             <div className={props.topPage ?( scrollPosition > 150 ? 'header_in_bottom' : 'header_in_top') : 'header_in_bottom'}>
                 <div className="logo">
-                    <Link to={add} exact>LOTTE HOTEL e-SHOP</Link>
+                    <Link to={add} exact onClick={() => setTest('')}>LOTTE HOTEL e-SHOP</Link>
                 </div>
                 <div className="ham_wrap">
                     <div className="ham">
@@ -100,7 +148,7 @@ const Header = (props) => {
 
                 <div className="menu">
                     <ul>
-                        <li>
+                        <li className="">
                             <Link to ='/components/drive' onClick={() => setTest('drive')} className={test === 'drive' ? 'visit_a' : 'nomal_a'}>드라이브스루</Link>
                         </li>
                         <li>
@@ -124,24 +172,28 @@ const Header = (props) => {
                 <div className="info_menu_wrap">
                     <div className="info_menu">
                         <ul>
-                            <li>
-                                <Link>로그인</Link>
+                            <li className="login_show">
+                                로그인
+                            </li>
+                            <li className="non_member_show">
+                                비회원<br/>주문조회
                             </li>
                             <li>
-                                <Link>비회원<br/>주문조회</Link>
+                                <Link to='/components/faq' onClick={() => setTest('')}>FAQ</Link>
                             </li>
                             <li>
-                                <Link>FAQ</Link>
-                            </li>
-                            <li>
-                                <Link>장바구니</Link>
+                                <Link to='/components/cart' onClick={() => setTest('')}>장바구니</Link>
                             </li>
                         </ul>
                     </div>
                     {/* info_menu */}
                     <div className="search_box">
-                        <input placeholder="검색어를 입력하세요"/>
+                        {/* <form action="/components/search"> */}
+                            <input placeholder="검색어를 입력하세요" className="search_input" onKeyUp = {(e) => {onKey(e)}} pattern='.{1,}' title='At least 1 characters'/>
+                        {/* </form> */}
                     </div>
+                    <LoginModal/>
+                    <NonMemberModal/>
                 </div>
                 {/* info_menu_wrap */}
             </div>

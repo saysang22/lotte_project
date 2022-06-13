@@ -38,7 +38,7 @@
 
 @mixin header_in() {
     @include horizental_flex();
-    background: rgba(255, 255, 255, .3);
+    background: rgba(0, 0, 0, .5);
     transition: all .5s;
     .logo {
         height: 100px;
@@ -77,9 +77,7 @@
 
     a {
         color: #fff;
-        text-shadow: $text_shadow;
         font-size: 1.2rem;
-        font-weight: bold;
     }
 
     .nomal_a {
@@ -87,79 +85,84 @@
     }
 
     .visit_a {
-        color: #545454;
-        text-shadow: none;
         font-size: 1.5rem;
+        border-bottom: 3px solid #ff9800;
+        padding: 0 0 5px 0;
     }
 
     }
 
     }
     .info_menu_wrap {
-    @include vertical_flex();
-    justify-content: space-evenly;
-    height: 100px;
-    flex: 1;
-    margin: 0 20px 0 0 ;
 
-    .info_menu {
-        width: 100%;
-    }
-
-    ul {
-        
-        @include horizental_flex();
-
+        @include vertical_flex();
         justify-content: space-evenly;
+        height: 100px;
+        flex: 1;
+        margin: 0 20px 0 0 ;
+
+        .info_menu {
+            width: 100%;
+        }
+
+        ul {
+            
+            @include horizental_flex();
+
+            justify-content: space-evenly;
 
 
-        li {
+            li {
 
-            flex: 1;
-            border-right: 1px solid #fff;
+                flex: 1;
+                border-right: 1px solid #a7a6a6;
+                color: #fff;
+                font-size: .9rem;
+                cursor: pointer;
+                height: 43px;
+                @include horizental_flex;
 
-            &:last-child {
-                border: none;
+
+                &:last-child {
+                    border: none;
+                }
+
+            }
+
+            a {
+                color: #fff;
+                font-size: .9rem;
             }
 
         }
 
-        a {
-            color: #fff;
-            font-size: .9rem;
-            text-shadow: $text_shadow;
+        .search_box {
+
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: url(../search.png) no-repeat 50% 0 / 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+            }
+        }
+
+        .search_input {
+            width: 300px;
+            height: 30px;
+            outline: none;
+            border: none;
+            padding: 0 0px 0 10px;
+            border-radius: 5px;
         }
 
     }
-
-    .search_box {
-
-        position: relative;
-
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: url(../search.png) no-repeat 50% 0 / 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 30px;
-        }
-    }
-
-    input {
-        width: 300px;
-        height: 30px;
-        outline: none;
-        border: none;
-        padding: 0 0px 0 10px;
-        border-radius: 8px;
-    }
-
-    }
-
 
 }
 
@@ -167,6 +170,7 @@
     width: 100%;
     margin: 0 0 100px 0;
     position: fixed;
+    top: 0;
     z-index: 9999;
     .header_in_top {
 
@@ -451,6 +455,9 @@
 
     }
     
+    .show_modal_wrap {
+        visibility: visible;
+    }
 
 
                   
