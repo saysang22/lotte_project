@@ -14,6 +14,9 @@ import BestContents from './components/bestContents';
 import Footer from './components/footer';
 import Faq from './components/faq';
 import Cart from './components/cart';
+import ACom from './components/aCom';
+import BCom from './components/bCom';
+
 
 function App() {
 
@@ -22,6 +25,8 @@ function App() {
   return (
     <div>
       <Header topPage={true} datas={shoes} />
+      <ACom/>
+      <BCom/>
       <Route exact path="/lotte_portfolio">
         <Main />
         <MainContents shoes={shoes} showmain={true} />
